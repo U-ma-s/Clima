@@ -84,7 +84,7 @@ extension WeatherViewController:WeatherManagerDelegate {//extensionでprotcolが
 extension WeatherViewController: CLLocationManagerDelegate{//CLLocationManagerのDelegateには以下の関数の実装を要求．（デフォはCLLocationManagerで既存）
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {//位置情報が返ってきたとき
         if let location = locations.last{
-            locationManager.stopUpdatingLocation()//位置情報の取得をストップしておかないと2回目以降の呼び出しができない
+            //locationManager.stopUpdatingLocation()//位置情報の取得をストップしておかないと2回目以降の呼び出しができない//そんなことないかも
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             weatherManager.fetchWeather(latitude: lat, longitude: lon)

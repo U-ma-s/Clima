@@ -10,6 +10,7 @@ protocol WeatherManagerDelegate {
 struct WeatherManager {
     let weatherURL = "{your Open Weather'API key}"
     
+    
     var delegate: WeatherManagerDelegate?//WeatherViewControllerクラス側でWeatherManagerのdelegateをWeatherViewControllerに設定．
     
     func fetchWeather(cityName: String){
